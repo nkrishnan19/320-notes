@@ -1327,7 +1327,12 @@ To \textbf{create a \texttt{dataframe}}, you have a variety of options.
 \subsection{Tidy Data}
 
 There are \textbf{3} components of \textbf{tidy data}: \textbf{Labels},  \textbf{Variables} (values), and \textbf{Observations}.\\
-
+Furthermore, tidy data has 3 rules:
+\begin{enumerate}
+	\item Each variable must have its own column
+	\item Each Observation must have its own row
+	\item Each value must have its own cell
+\end{enumerate}
 {
 
 \centering
@@ -1753,6 +1758,50 @@ Here's a neat way to visualize joins using Venn Diagrams.\\\\
 
 
 }
+\subsection{Prediction vs Inference}
+Drawing useful conclusions from data is an important skill. This can be done by identifying patterns in information, using visualizations, and bringing data together.
+\begin{tcolorbox}[title=Aside: Prediction and Inference,colframe=black,colback=white,arc=0pt,fonttitle=\bfseries]
+	\textbf{Prediction:} Given what I've seen, what is the most likely value I'll see in the future? 
+	\begin{itemize}
+	\item Predictions forecast the most likely values of the data cominng from the data gnerating process.
+	\item Making Informed Guesses
+	\item Uses Machine Learning and Optimization 
+	\end{itemize}
+	\textbf{Inference:} How likely is what I observed representative of the broader picture?
+	\begin{itemize}
+		\item Statistical inference draws conclusions (with confidence) about the structure of the data generating process (population).
+		\item Quantifying whether those patterns are realizableUses randomization
+	\end{itemize} 
+	Notes: \textbf{Inferences} learn about the data generation process while \textbf{Predictions} predict what will come next.
+	\end{tcolorbox}
+\subsection{Introduction to Models}
+A \textbf{Model} is a theory or explanation of the data generationn process (relationship). A \textbf{True Model / Population} is a phenomemon under investigation. Models can be useful when it comes to analyzing and visualizing data. \\
+\textbf{Fit Model:} An instance of a model that is likely to explain a fixed dataset. 
+\begin{itemize}
+	\item Finds the most likely parameters that explain the observed data under the given model.
+	\item Parameters are found by minimizing a loss function - typically some notion of 'error' or 'cost'.
+\end{itemize} 
+\textit{Note: Model is effective if it captures the general understanding of how Data processing behaves and describes the data well.} \\
+
+\textbf{Statistical Model:} An instance of a model that is likely to explain a fixed dataset. 
+\begin{itemize}
+	\item Function that measures properties of X
+	\item Example: is there a linear relationship between the heights of children and the ehigh of their buological mother?
+\end{itemize}
+
+\textbf{Prediction Model Regression:} attempts to predict most likely quantitave value associated to an observation (set of input features).
+\begin{itemize}
+	\item Regression results in having a model that we can use to predict a numerical value for data that we have not seen yet
+	\item Example - Give the heights of a child's parents, what is the height of their child?
+\end{itemize}
+
+\textbf{Prediction Model Classification:} attempts to predict most likely class associated to an observation (set of input features)
+\begin{itemize}
+	\item Example - Given product purchase attributes (item, price, age, state), can one preduct whether the person was satisfied with their purchase?
+	\item Classification results in a model that we can use to preduct labels for data we have not seen
+\end{itemize}
+
+
 
 \section{Version Control Software (L7)}
 
@@ -2597,7 +2646,7 @@ The Logarithmic transformation is especially useful when standardizing data that
 
 A \textbf{graph} is a data structure describing a set of vertices and edges. It can either be \textbf{weighted} or \textbf{unweighted}, \textbf{directed} or \textbf{non-directed}.\\
 
-You can store graphs in a few different ways.\\
+You can store graphs in a few different ways. They also are mathematical models used to represent networks. We will apply algorithms on graphs to answer questions about real-world networks. \\
 
 \begin{myproof}
 \textbf{Adjacency List}\\
@@ -2719,7 +2768,7 @@ Cons:
 
 \subsection{Graph Databases}
 
-Graph databases exist and are an alternative to relational databases.\\
+Graph databases exist and are an alternative to relational databases. \\
 
 \begin{myproof}
 \textbf{Example:} A very simple graph database. Note the similarities to a relational database. Here, the different relations like '\texttt{is\_friend}' and '\texttt{read}' can be represented with, for example, separate adjacency dictionaries.\\\\
