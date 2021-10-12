@@ -2424,7 +2424,16 @@ The idea of \textbf{weighted average} is when you give more power to larger cont
 \begin{myproof}
 The \textbf{median} of \texttt{[1,2,4,6,8,9,17000]} is $6$\\
 The \textbf{mean} of \texttt{[1,2,4,6,8,9,17000]} is $2432.8$ 
-\end{myproof} 
+\end{myproof}
+
+Skewed Data occurs with the data is not symmetric in which case the mean does not equal the median.
+\begin{itemize}
+	\item Left Skewed $\rightarrow$ Mean < Median
+	\item Symmetrict $\rightarrow$ Mean = Median
+	\item Right Skewed $\leftarrow$ Mean > Median
+\end{itemize}
+
+The mean will exceed the median when the distribution is skewed to the right. Skewness is in the direction of the long tail.
 
 \subsection{Measures of Dispersion}
 
@@ -2501,6 +2510,9 @@ $$\frac{1}{n}\sum_{i=1}^{n}{(x_i-\bar{x})^2}$$\\
 \hfill \break In this case, $x_i$ represents each data point, while $\bar{x}$ represents the sample mean.\\
 
 However, the units get messed up when we calculate variance. Thus, \textbf{standard deviation} is an \textbf{interpretable} unit of measurement for dispersion.\\
+\begin{tcolorbox}[title=Aside: Variance,colframe=black,colback=white,arc=0pt,fonttitle=\bfseries]
+	Dividing by n-1 in the \textit{sample variance} leads to unbiased estimate of the population variance. Sampled values are on average closer tot he sample mean than to the true population, so we will underestimate the true variance slightly. The n-1 makes the variance calculation slightly bigger. This is \textbf{embiggening} which impacts smaller n more than a larger n. \textit{If sample IS the population then just divide by n}
+	\end{tcolorbox}
 
 We calculate the standard deviation by simply finding the square root of variance. The formula is as follows:\\
 
